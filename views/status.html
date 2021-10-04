@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="16" />
+    <title>Water And Wind</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap");
+      body {
+        font-family: "Open Sans", sans-serif;
+        background: #edf2f8;
+        padding: 0;
+        margin: 0;
+      }
+
+      .container {
+        margin: 0 auto;
+        max-width: 1280px;
+        width: 95%;
+      }
+
+      @media only screen and (min-width: 481) {
+        .container {
+          width: 60%;
+        }
+      }
+
+      @media only screen and (min-width: 769px) {
+        .container {
+          width: 35%;
+        }
+      }
+
+      .card {
+        border-radius: 8px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+          rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+      }
+
+      .mt-2 {
+        margin-top: 0.5rem;
+      }
+      .mt-3 {
+        margin-top: 0.75rem;
+      }
+
+      .p-7 {
+        padding: 1.75rem;
+      }
+
+      .w-full {
+        width: 100%;
+      }
+
+      .center-x {
+        display: flex;
+        justify-content: center;
+      }
+
+      .center-y {
+        height: 90vh;
+        display: flex;
+        align-items: center;
+      }
+
+      .text-center {
+        text-align: center;
+      }
+
+      .bg-white {
+        background-color: #fffffe;
+      }
+
+      .rounded {
+        border-radius: 50%;
+      }
+
+      .flex {
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+      }
+
+      .spacing-2 {
+        gap: 2rem;
+      }
+
+      .font-weight-normal {
+        font-weight: 500;
+      }
+
+      .font-weight-semibold {
+        font-weight: 600;
+      }
+
+      .font-weight-bold {
+        font-weight: 700;
+      }
+
+      .text-4xl {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+      }
+
+      .text-lg {
+        font-size: 1.125rem;
+        line-height: 1.75rem;
+      }
+
+      .text-base {
+        font-size: 1rem;
+        line-height: 1.5rem;
+      }
+
+      .text-gray-700 {
+        color: #374151;
+      }
+
+      .text-gray-500 {
+        color: #6b7280;
+      }
+    </style>
+  </head>
+  <body class="center-x center-y">
+    <div class="container">
+      <div class="card bg-white">
+        <div class="flex spacing-2 p-7">
+          <div class="w-full">
+            <div class="text-lg font-weight-semibold text-gray-700">Water</div>
+            <div class="text-4xl font-weight-bold text-gray-700 mt-2">
+              {{.water}}
+              <span class="text-lg font-weight-normal">m</span>
+            </div>
+            <div class="text-base font-weight-normal text-gray-500 mt-3">
+              {{.waterStatus}}
+            </div>
+          </div>
+          <div class="w-full">
+            <div class="text-lg font-weight-semibold text-gray-700">Wind</div>
+            <div class="text-4xl font-weight-bold text-gray-700 mt-2">
+              {{.wind}}
+              <span class="text-lg font-weight-normal">m/s</span>
+            </div>
+            <div class="text-base font-weight-normal text-gray-500 mt-3">
+              {{.windStatus}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
